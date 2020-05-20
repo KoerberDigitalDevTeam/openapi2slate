@@ -1,5 +1,5 @@
 {
-  "name": "openapi2slate",
+  "name": "@koerber-internal/openapi2slate",
   "version": "1.0.1",
   "description": "Convert an Open API (i.e. Swagger) specification to Slate Markdown",
   "homepage": "https://github.com/KoerberDigitalDevTeam/openapi2slate",
@@ -17,5 +17,8 @@
     "lodash": "^4.13.1",
     "markdown-it": "^7.0.0",
     "swagger-parser": "^3.4.1"
+  },
+  "publishConfig": {
+    "registry": "https://connyun.jfrog.io/connyun/api/npm/npm/connyun"
   }
 }
