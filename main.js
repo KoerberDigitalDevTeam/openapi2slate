@@ -11,7 +11,7 @@ program
   .option('--include-internal', 'Include Internal API calls')
   .option('--paths-only', 'only pathes')
   .option('--no-basepath', 'do not add basePath to output')
-  .option('--readme <file>', 'replace block "== paths ==" [..] "# end == paths ==" in readme')
+  .option('--readme <file>', 'replace block between start_pattern and stop_pattern see source code for patterns')
   .action(function(file) {
     apiFilePath = file;
   });
