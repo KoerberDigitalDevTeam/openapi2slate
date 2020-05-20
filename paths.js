@@ -19,7 +19,10 @@ module.exports = {
       else if(p.get != undefined) {
         pathDetails = p.get;
       }
-      return pathDetails.tags[0];
+      if (pathDetails.tags != undefined) {
+        return pathDetails.tags[0];
+      } else
+        return p.name;
     });
   },
   filterInternalTag: function(paths) {
