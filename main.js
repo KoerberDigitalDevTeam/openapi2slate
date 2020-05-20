@@ -10,6 +10,7 @@ program
   .option('--validate', 'Validate the API')
   .option('--include-internal', 'Include Internal API calls')
   .option('--paths-only', 'only pathes')
+  .option('--no-basepath', 'do not add basePath to output')
   .option('--readme <file>', 'replace block "== paths ==" [..] "# end == paths ==" in readme')
   .action(function(file) {
     apiFilePath = file;

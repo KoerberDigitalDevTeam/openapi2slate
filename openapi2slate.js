@@ -17,7 +17,8 @@ module.exports = {
     RefParser.dereference(api)
       .then(function(deRefApi) {
         // Paths from dereferenced API
-        var epPaths = paths.addEndpointToPaths(deRefApi.basePath, deRefApi.paths);
+        const basePath = (program.basepath)? deRefApi.basePath : ''
+        var epPaths = paths.addEndpointToPaths(basePath, deRefApi.paths);
         if(!program.includeInternal) {
           epPaths = paths.filterInternalTag(epPaths);
         }
