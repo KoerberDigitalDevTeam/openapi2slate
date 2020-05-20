@@ -1,3 +1,8 @@
+# Koerber Digital version of `OpenAPI to Slate Markdow`
+
+the goal is to auto-generate URL paths for our README.md files
+try like this: `openapi2slate --paths-only --no-basepath --readme some-service/Readme.md some-service/deploy/templates/swagger.yaml`
+
 # OpenAPI to Slate Markdown
 
 An opinionated and Work in Progress converter from
