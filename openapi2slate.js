@@ -51,7 +51,8 @@ const printPathsOnly = (epPaths, start_pattern, stop_pattern) => {
         return
       let type = method.toUpperCase().padEnd(10,' ')
       let paramList = (path[method].parameters)? path[method].parameters.filter( el => el.in === 'query' && el.required==true ).map(el=>`${el.name}=[${el.name}]`).join('&') : ''
-      parameters += util.format(`${type} ${path['endpoint']}?${paramList}\n`)
+      let questionMark = (paramList.length > 0)? '?' : ''
+      parameters += util.format(`${type} ${path['endpoint']}${questionMark}${paramList}\n`)
     })
   });
   parameters += "\n"+stop_pattern
