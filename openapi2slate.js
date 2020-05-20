@@ -54,7 +54,7 @@ const printPathsOnly = (epPaths, start_pattern, stop_pattern) => {
       parameters += util.format(`${type} ${path['endpoint']}?${paramList}\n`)
     })
   });
-  parameters += "\n"+stop_pattern+"\n"
+  parameters += "\n"+stop_pattern
   return parameters
 }
 
