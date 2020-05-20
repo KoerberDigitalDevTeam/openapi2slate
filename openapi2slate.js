@@ -18,7 +18,10 @@ module.exports = {
 
         if (program.pathsOnly) {
           let output = printPathsOnly(epPaths);
-          console.log(output)
+          if (program.readme) {
+            replaceBlock(program.readme, output, `Available paths:\n\`\`\``, )
+          } else {
+            console.log(output)
           }
         } else 
           printNormal(epPaths, api, program.includeInternal);
@@ -57,4 +60,19 @@ const printNormal= (epPaths, api, includeInternal)=> {
   // Responses + Definitions
   console.log(responses.responsesSection(api.responses, 1));
   console.log(definitions.definitionsObject(api.definitions));
+}
+
+const replaceBlock = (file, output, start_block, end) => {
+  var fs = require('fs')
+  fs.readFile(file, 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  const regex = new RegExp(`${start_block}.*?\`\`\``,"s"); //```.*```/g, output);)
+  var result = data.replace(regex, output)
+
+  fs.writeFile(file, result, 'utf8', function (err) {
+     if (err) return console.log(err);
+  });
+});
 }
