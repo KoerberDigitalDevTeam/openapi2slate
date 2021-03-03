@@ -22,6 +22,6 @@
     "swagger-parser": "^3.4.1"
   },
   "publishConfig": {
-    "registry": "https://connyun.jfrog.io/connyun/api/npm/npm-local/"
+    "registry": "https://connyun.jfrog.io/connyun/api/npm/npm/"
   }
 }
