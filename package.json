@@ -1,6 +1,6 @@
 {
   "name": "@koerber-internal/openapi2slate",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Convert an Open API (i.e. Swagger) specification to Slate Markdown",
   "homepage": "https://github.com/KoerberDigitalDevTeam/openapi2slate",
   "repository": {
